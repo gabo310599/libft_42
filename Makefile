@@ -47,22 +47,37 @@ SRC = ft_atoi.c \
 		ft_substr.c \
 		ft_tolower.c \
 		ft_toupper.c
+SRC_BONUS = ft_lstadd_back.c \
+			ft_lstadd_front.c \
+			ft_lstclear.c \
+			ft_lstdelone.c \
+			ft_lstiter.c \
+			ft_lstlast.c \
+			ft_lstmap.c \
+			ft_lstnew.c \
+			ft_lstsize.c
 OBJ = ${SRC:.c=.o}
+B_OBJ = ${SRC_BONUS:.c=.o}
 RM = rm -f
 AR = @ar rcs
 
 all: ${NAME}
 
-%.o: %.c
-	@${CC} ${CFLAGS} -c $< -o $@
-
 $(NAME): ${OBJ}
 	${AR} ${NAME} ${OBJ}
 
+bonus:	${OBJ} ${B_OBJ}
+	${AR} ${NAME} ${OBJ} ${B_OBJ}
+
+%.o: %.c
+	@${CC} ${CFLAGS} -c $< -o $@
+
 clean:
-	@${RM} ${OBJ}
+	@${RM} ${OBJ} ${B_OBJ}
 
 fclean:	clean
 	@${RM} ${NAME}
 
 re:	fclean all
+
+.PHONY: all clean fclean re bonus
