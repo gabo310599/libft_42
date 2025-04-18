@@ -11,6 +11,7 @@
 # **************************************************************************** #
 
 NAME = libft.a
+CC = cc
 SRC = ft_atoi.c \
 		ft_bzero.c \
 		ft_calloc.c \
@@ -52,7 +53,6 @@ SRC_BONUS = ft_lstadd_back_bonus.c \
 			ft_lstiter_bonus.c \
 			ft_lstlast_bonus.c \
 			ft_lstmap_bonus.c \
-			ft_lstmap_bonus.c \
 			ft_lstnew_bonus.c \
 			ft_lstsize_bonus.c
 CFLAGS = -Wall -Werror -Wextra
@@ -65,6 +65,9 @@ all: ${NAME}
 
 $(NAME): ${OBJ}
 	${AR} ${NAME} ${OBJ}
+
+%.o: %.c
+	${CC} ${CFLAGS} -c $< -o $@ 
 
 bonus:	${OBJ} ${B_OBJ}
 	${AR} ${NAME} ${OBJ} ${B_OBJ}
