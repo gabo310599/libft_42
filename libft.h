@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gojeda <gojeda@student.42mdrid.com>        +#+  +:+       +#+        */
+/*   By: gojeda <gojeda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 13:04:58 by gojeda            #+#    #+#             */
-/*   Updated: 2025/04/10 13:05:01 by gojeda           ###   ########.fr       */
+/*   Updated: 2025/05/30 21:53:17 by gojeda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdint.h>
 # include <unistd.h>
 
+/*******************************************************************/
 //Funciones obligatorias
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
@@ -71,4 +72,19 @@ t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
+/*******************************************************************/
+//Printf
+int		ft_printf(const char *format, ...);
+int		ft_putchar(int c);
+int		ft_putstr(char *str);
+void	ft_putnbr_base(int nb, char *base);
+int		ft_count_digits(int num);
+int		ft_putunsigned(unsigned int n);
+int		ft_puthex(unsigned long n);
+int		ft_putptr(void *ptr);
+int		ft_count_hex_digits(unsigned int n);
+int		ft_validate_base_errors(char *base, int len);
+void	ft_putnbr_base_unsigned(unsigned int num, char *base);
+int		ft_calculate_base_len(char *base);
+/*******************************************************************/
 #endif

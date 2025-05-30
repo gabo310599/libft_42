@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gojeda <gojeda@student.42madrid.com>       +#+  +:+       +#+         #
+#    By: gojeda <gojeda@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/11 16:33:59 by gojeda            #+#    #+#              #
-#    Updated: 2025/04/11 16:34:01 by gojeda           ###   ########.fr        #
+#    Updated: 2025/05/30 21:55:29 by gojeda           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,11 @@ SRC = ft_atoi.c \
 		ft_strtrim.c \
 		ft_substr.c \
 		ft_tolower.c \
-		ft_toupper.c
+		ft_toupper.c \
+		ft_printf.c \
+		ft_printf_utils.c \
+		ft_printf_utils_base.c \
+		ft_printf_hex_parse.c
 SRC_BONUS = ft_lstadd_back_bonus.c \
 			ft_lstadd_front_bonus.c \
 			ft_lstclear_bonus.c \
